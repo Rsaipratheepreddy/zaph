@@ -1,0 +1,399 @@
+.main {
+  min-height: 100vh;
+}
+
+.header {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 155, 205, 0.2) 0%, rgba(184, 233, 134, 0.2) 50%, rgba(80, 227, 194, 0.2) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/images/placeholder.jpg') center/cover no-repeat;
+  opacity: 0.1;
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, var(--art-color), var(--tech-color), var(--music-color), var(--tattoo-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Featured section with carousel */
+.featured {
+  padding: 6rem 0;
+}
+
+.carousel {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+}
+
+.carouselSlide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.carouselImage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slideImage {
+  object-fit: cover;
+}
+
+.carouselContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+}
+
+.carouselContent h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.artist {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.category {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.carouselControl {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.carouselControl:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+/* Gallery section */
+.gallery {
+  padding: 6rem 0;
+  background-color: #f9f9f9;
+}
+
+.filterControls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.filterButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.filterButton::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--art-color);
+  transition: width 0.3s ease;
+}
+
+.filterButton:hover::after {
+  width: 80%;
+}
+
+.filterButton.active {
+  font-weight: 600;
+}
+
+.filterButton.active::after {
+  width: 80%;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.galleryItem {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galleryItem:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.galleryImageContainer {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.galleryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.galleryItem:hover .galleryImage {
+  transform: scale(1.05);
+}
+
+.galleryOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.galleryItem:hover .galleryOverlay {
+  opacity: 1;
+}
+
+.galleryOverlay h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.galleryOverlay p {
+  margin-bottom: 1rem;
+}
+
+.viewButton {
+  padding: 0.5rem 1rem;
+  background: white;
+  color: var(--text-primary);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.viewButton:hover {
+  background: var(--art-color);
+  color: white;
+}
+
+.galleryInfo {
+  padding: 1.5rem;
+  background: white;
+}
+
+.galleryInfo h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Upload section */
+.upload {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, var(--art-color) 0%, var(--tech-color) 100%);
+  color: white;
+}
+
+.uploadContent {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.uploadContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.uploadContent p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.uploadButton {
+  padding: 1rem 2rem;
+  background: white;
+  color: var(--text-primary);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.uploadButton:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateY(-3px);
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 4rem;
+  }
+  
+  .carousel {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .carousel {
+    height: 400px;
+  }
+  
+  .carouselContent h3 {
+    font-size: 1.5rem;
+  }
+  
+  .galleryGrid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 40vh;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .carousel {
+    height: 300px;
+  }
+  
+  .carouselContent {
+    padding: 1rem;
+  }
+  
+  .carouselContent h3 {
+    font-size: 1.2rem;
+  }
+  
+  .filterControls {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+  
+  .filterButton {
+    padding: 0.5rem 1rem;
+  }
+}

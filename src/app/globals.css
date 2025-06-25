@@ -1,12 +1,29 @@
+@import '../styles/colors.css';
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Legacy Colors - Keeping for backward compatibility */
+  --black: #000000;
+  --dark-gray: #242424;
+  --coral: #FF9C94;
+  --lime: #CCE561;
+  --dark-green: #334238;
+  --cream: #FAF2E8;
+  
+  /* New global mappings using the new color palette */
+  --background: var(--canvas-white);
+  --foreground: var(--alien-graphite);
+  --accent: var(--cosmic-blue);
+  --highlight: var(--solar-orange);
+  --secondary-accent: var(--galactic-yellow);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--alien-graphite);
+    --foreground: var(--canvas-white);
+    --accent: var(--cosmic-blue);
+    --highlight: var(--solar-orange);
+    --secondary-accent: var(--galactic-yellow);
   }
 }
 
@@ -19,7 +36,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Figtree, sans-serif, -apple-system, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

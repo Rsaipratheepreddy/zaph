@@ -1,0 +1,355 @@
+.musicPage {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.header {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--music-color);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.headerContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.headerDescription {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.soundWave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  padding: 0 2rem;
+  z-index: 1;
+}
+
+.bar {
+  width: 12px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 4px 4px 0 0;
+  animation: soundBars 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes soundBars {
+  0% {
+    height: 20%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.services {
+  padding: 8rem 0;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.servicesList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.serviceCard {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.serviceIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background-color: rgba(100, 204, 240, 0.1);
+  border-radius: 50%;
+  color: var(--music-color);
+}
+
+.serviceCard h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.serviceCard p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.projects {
+  padding: 8rem 0;
+  background-color: #f9f9f9;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.projectCard {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.projectImageContainer {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.projectDetails {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  color: white;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.projectCard:hover .projectDetails {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.projectDetails h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.projectDetails p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--music-color);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.approach {
+  padding: 8rem 0;
+}
+
+.approachContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.approachText p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.approachVisual {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(100, 204, 240, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.frequencyBars {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  padding: 2rem;
+}
+
+.frequencyBar {
+  flex: 1;
+  background: linear-gradient(to top, var(--music-color) 0%, #9be0ff 100%);
+  border-radius: 4px 4px 0 0;
+  animation: frequencyAnimation 2s ease-in-out infinite alternate;
+}
+
+@keyframes frequencyAnimation {
+  0% {
+    height: var(--height, 50%);
+  }
+  100% {
+    height: calc(var(--height, 50%) - 30%);
+  }
+}
+
+.cta {
+  padding: 8rem 0;
+  text-align: center;
+  background: linear-gradient(45deg, var(--music-color) 0%, #9be0ff 100%);
+  color: white;
+}
+
+.cta h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButton {
+  padding: 1rem 2.5rem;
+  background-color: white;
+  color: var(--music-color);
+  border: none;
+  border-radius: 4px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .servicesList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .approachContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 6rem;
+  }
+  
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bar {
+    width: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 60vh;
+  }
+  
+  .header h1 {
+    font-size: 4rem;
+  }
+  
+  .servicesList {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta h2 {
+    font-size: 2rem;
+  }
+  
+  .soundWave {
+    gap: 2px;
+  }
+  
+  .bar {
+    width: 6px;
+  }
+}

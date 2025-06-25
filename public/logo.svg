@@ -1,0 +1,10 @@
+<svg width="120" height="48" viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hexagon shape -->
+  <path d="M24 6L6 18L6 42L24 54L42 42L42 18L24 6Z" fill="#8BC34A" stroke="#FFFFFF" stroke-width="1"/>
+  
+  <!-- Inner shape -->
+  <path d="M24 14L12 21L12 35L24 42L36 35L36 21L24 14Z" fill="#FFFFFF"/>
+  
+  <!-- Text -->
+  <text x="50" y="28" font-family="Arial" font-weight="bold" font-size="14" fill="white">NEW ENGEN</text>
+</svg>
