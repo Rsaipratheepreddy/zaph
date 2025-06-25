@@ -130,7 +130,7 @@ export default function Hero() {
     const cards = cardRefs.current.filter(Boolean);
 
     // Initial fade-in for cards
-    cards.forEach((card, index) => {
+    cards.forEach((card) => {
       gsap.set(card, {
         opacity: 0,
         scale: 0.8,

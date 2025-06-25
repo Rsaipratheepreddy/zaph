@@ -54,12 +54,11 @@ export default function News() {
     if (!newsSection) return;
 
     // Create card placeholders for incoming cards from banner
-    const placeholders = cardPlaceholderRefs.current;
-    
+
     // Set initial state for news items
-    newsItemRefs.current.forEach((item, index) => {
+    newsItemRefs.current.forEach((item) => {
       if (!item) return;
-      gsap.set(item, { 
+      gsap.set(item, {
         opacity: 0,
         y: 50
       });
@@ -96,21 +95,21 @@ export default function News() {
     <section className={styles.newsSection} ref={newsRef} id="news">
       <div className={styles.newsContainer}>
         <h2 className={styles.newsHeading}>Latest News</h2>
-        
+
         <div className={styles.cardPlaceholders}>
           {[0, 1, 2, 3].map((index) => (
-            <div 
-              key={`placeholder-${index}`} 
+            <div
+              key={`placeholder-${index}`}
               className={styles.cardPlaceholder}
               ref={(el: HTMLDivElement | null) => { cardPlaceholderRefs.current[index] = el; }}
               id={`news-placeholder-${index}`}
             ></div>
           ))}
         </div>
-        
+
         <div className={styles.newsGrid}>
           {newsItems.map((item, index) => (
-            <div 
+            <div
               key={item.title}
               className={styles.newsItem}
               ref={(el: HTMLDivElement | null) => { newsItemRefs.current[index] = el; }}

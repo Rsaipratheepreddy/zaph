@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState, useLayoutEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import styles from './NewBanner.module.css';
 import gsap from 'gsap';
@@ -180,29 +180,29 @@ export default function Dimensionless() {
       .to({}, { duration: 1 })
       // Second move - rotate the carousel (card at back comes to front)
       .to(cards, {
-        x: (i, target) => {
+        x: (i) => {
           // Get the index of this card and calculate its new position
           // This simulates a carousel rotation where the last card comes to the front
           const newIndex = (i + 1) % cards.length;
           return newIndex === 0 ? -50 : (30 + (newIndex * 20));
         },
-        y: (i, target) => {
+        y: (i) => {
           const newIndex = (i + 1) % cards.length;
           return newIndex === 0 ? -30 : (newIndex * 15);
         },
-        rotation: (i, target) => {
+        rotation: (i) => {
           const newIndex = (i + 1) % cards.length;
           return newIndex === 0 ? -8 : (-3 + (newIndex * 2));
         },
-        scale: (i, target) => {
+        scale: (i) => {
           const newIndex = (i + 1) % cards.length;
           return newIndex === 0 ? 1.05 : (0.95 - (newIndex * 0.02));
         },
-        zIndex: (i, target) => {
+        zIndex: (i) => {
           const newIndex = (i + 1) % cards.length;
           return newIndex === 0 ? 10 : (5 - newIndex);
         },
-        boxShadow: (i, target) => {
+        boxShadow: (i) => {
           const newIndex = (i + 1) % cards.length;
           return newIndex === 0 ?
             '0 20px 40px rgba(0, 123, 189, 0.5), 0 0 25px rgba(0, 210, 255, 0.4)' :
