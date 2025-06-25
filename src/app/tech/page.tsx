@@ -157,7 +157,7 @@ export default function TechPage() {
             <p className={styles.headerDescription}>
               Discover the intersection of technology and creative expression. We create
               interactive installations, digital experiences, and technological art that
-              pushes the boundaries of what's possible.
+              pushes the boundaries of what&apos;s possible.
             </p>
           </div>
           <div className={styles.gridOverlay}></div>
@@ -285,7 +285,7 @@ export default function TechPage() {
         <section className={styles.cta}>
           <div className={styles.container}>
             <h2>Ready to explore the possibilities of creative technology?</h2>
-            <p>Let's collaborate on your next innovative project.</p>
+            <p>Let&apos;s collaborate on your next innovative project.</p>
             <button className={styles.ctaButton}>Get in Touch</button>
           </div>
         </section>

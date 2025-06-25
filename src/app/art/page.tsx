@@ -220,7 +220,7 @@ export default function ArtPage() {
         <section className={styles.cta}>
           <div className={styles.container}>
             <h2>Ready to bring your artistic vision to life?</h2>
-            <p>Let's collaborate on your next creative project.</p>
+            <p>Let&apos;s collaborate on your next creative project.</p>
             <button className={styles.ctaButton}>Get in Touch</button>
           </div>
         </section>

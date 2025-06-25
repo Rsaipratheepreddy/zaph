@@ -274,7 +274,7 @@ export default function MusicPage() {
                 </p>
                 <p>
                   Our process combines traditional musicianship with innovative technologies,
-                  allowing us to push the boundaries of what's possible in sonic art.
+                  allowing us to push the boundaries of what&apos;s possible in sonic art.
                 </p>
               </div>
               <div className={styles.approachVisual}>
@@ -298,7 +298,7 @@ export default function MusicPage() {
         <section className={styles.cta}>
           <div className={styles.container}>
             <h2>Ready to explore the sonic dimension of your project?</h2>
-            <p>Let's create something that resonates.</p>
+            <p>Let&apos;s create something that resonates.</p>
             <button className={styles.ctaButton}>Get in Touch</button>
           </div>
         </section>

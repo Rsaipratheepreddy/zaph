@@ -1,6 +1,6 @@
 'use client';
 
-import styles from "./page.module.css";
+// Styles import removed as it was unused
 import EnhancedHero from "../components/EnhancedHero";
 import EnhancedServices from "../components/EnhancedServices";
 import ArtWall from "../components/ArtWall";

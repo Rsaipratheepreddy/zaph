@@ -493,7 +493,7 @@ export default function Dimensionless() {
               <li><a href="#">Company</a></li>
             </ul>
           </nav>
-          <button className={styles.ctaButton}>Let's talk</button>
+          <button className={styles.ctaButton}>Let&apos;s talk</button>
         </div>
       </header>
       <div className={styles.container}>
